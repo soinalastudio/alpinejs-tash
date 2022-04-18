@@ -5,7 +5,7 @@ export default function (Alpine) {
       .split(",")
       .map((expression) => expression.trim());
     const templateEl = document.createElement("template");
-    const findExpression = (expression) => new RegExp(`{{\s*${expression}\s*}}`, "g");
+    const findExpression = (expression) => new RegExp(`{{\\s*${expression}\\s*}}`, "g");
 
     templateEl.innerHTML = el.innerHTML;
 
